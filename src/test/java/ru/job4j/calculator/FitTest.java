@@ -1,6 +1,7 @@
 package ru.job4j.calculator;
 
 import static org.assertj.core.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 class FitTest {
@@ -39,7 +40,7 @@ class FitTest {
 
     @Test
     void whenManHeight250ThenHighWeight() {
-        short input = 250; // Ќестандартно высокий рост дл€ проверки.
+        short input = 250;
         double expected = (input - Fit.BASE_HEIGHT_MAN) * Fit.WEIGHT_MULTIPLIER;
         double result = Fit.calculateManWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
