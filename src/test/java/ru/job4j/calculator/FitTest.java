@@ -25,7 +25,7 @@ class FitTest {
     @Test
     void whenManHeight187Then100Dot05() {
         short input = 187;
-        double expected = (187 - 100) * 1.15;
+        double expected = 100.05;
         double result = Fit.calculateManWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
@@ -33,7 +33,7 @@ class FitTest {
     @Test
     void whenWomanHeight166Then64Dot4() {
         short input = 166;
-        double expected = (166 - 110) * 1.15;
+        double expected = 64.4;
         double result = Fit.calculateWomanWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
@@ -41,7 +41,7 @@ class FitTest {
     @Test
     void whenManHeight250Then172Dot5() {
         short input = 250;
-        double expected = (250 - 100) * 1.15;
+        double expected = 172.5;
         double result = Fit.calculateManWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
@@ -49,7 +49,7 @@ class FitTest {
     @Test
     void whenWomanHeight50ThenNegative69() {
         short input = 50;
-        double expected = (50 - 110) * 1.15;
+        double expected = -69;
         double result = Fit.calculateWomanWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01)).isLessThan(0);
     }
