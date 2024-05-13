@@ -8,7 +8,7 @@ class FitTest {
 
     @Test
     void whenManHeight100Then0() {
-        short input = Fit.BASE_HEIGHT_MAN;
+        short input = 100;
         double expected = 0.0;
         double result = Fit.calculateManWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
@@ -16,7 +16,7 @@ class FitTest {
 
     @Test
     void whenWomanHeight110Then0() {
-        short input = Fit.BASE_HEIGHT_WOMAN;
+        short input = 110;
         double expected = 0.0;
         double result = Fit.calculateWomanWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
@@ -25,7 +25,7 @@ class FitTest {
     @Test
     void whenManHeight187Then100Dot05() {
         short input = 187;
-        double expected = 100.05;
+        double expected = (187 - 100) * 1.15;
         double result = Fit.calculateManWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
@@ -33,24 +33,24 @@ class FitTest {
     @Test
     void whenWomanHeight166Then64Dot4() {
         short input = 166;
-        double expected = 64.4;
+        double expected = (166 - 110) * 1.15;
         double result = Fit.calculateWomanWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    void whenManHeight250ThenHighWeight() {
+    void whenManHeight250Then172Dot5() {
         short input = 250;
-        double expected = (input - Fit.BASE_HEIGHT_MAN) * Fit.WEIGHT_MULTIPLIER;
+        double expected = (250 - 100) * 1.15;
         double result = Fit.calculateManWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    void whenWomanHeight50ThenNegativeWeight() {
+    void whenWomanHeight50ThenNegative69() {
         short input = 50;
-        double expected = (input - Fit.BASE_HEIGHT_WOMAN) * Fit.WEIGHT_MULTIPLIER;
+        double expected = (50 - 110) * 1.15;
         double result = Fit.calculateWomanWeight(input);
-        assertThat(result).isLessThan(0);
+        assertThat(result).isEqualTo(expected, withPrecision(0.01)).isLessThan(0);
     }
 }
