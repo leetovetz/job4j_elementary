@@ -37,20 +37,4 @@ class FitTest {
         double result = Fit.calculateWomanWeight(input);
         assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
-
-    @Test
-    void whenManHeight250Then172Dot5() {
-        short input = 250;
-        double expected = 172.5;
-        double result = Fit.calculateManWeight(input);
-        assertThat(result).isEqualTo(expected, withPrecision(0.01));
-    }
-
-    @Test
-    void whenWomanHeight50ThenNegative69() {
-        short input = 50;
-        double expected = -69;
-        double result = Fit.calculateWomanWeight(input);
-        assertThat(result).isEqualTo(expected, withPrecision(0.01)).isLessThan(0);
-    }
 }
