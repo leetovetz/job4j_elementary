@@ -6,13 +6,11 @@ public class Fit {
     public static final double WEIGHT_MULTIPLIER = 1.15;
 
     public static double calculateManWeight(short height) {
-        double result = (height - BASE_HEIGHT_MAN) * WEIGHT_MULTIPLIER;
-        return result;
+        return (height - BASE_HEIGHT_MAN) * WEIGHT_MULTIPLIER;
     }
 
     public static double calculateWomanWeight(short height) {
-        double result = (height - BASE_HEIGHT_WOMAN) * WEIGHT_MULTIPLIER;
-        return result;
+        return (height - BASE_HEIGHT_WOMAN) * WEIGHT_MULTIPLIER;
     }
 
     public static void main(String[] args) {
