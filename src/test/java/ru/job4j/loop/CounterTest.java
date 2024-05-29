@@ -45,7 +45,7 @@ class CounterTest {
     void whenSumEvenNumbersFrom1To10Then30() {
         int start = 1;
         int finish = 10;
-        int result = Counter.sumByEven(start, finish);
+        int result = Counter.sumByEven5(start, finish);
         int expected = 30;
         assertThat(result).isEqualTo(expected);
     }
@@ -54,7 +54,7 @@ class CounterTest {
     void whenSumEvenNumbersFromZeroTo20Then110() {
         int start = 0;
         int finish = 20;
-        int result = Counter.sumByEven(start, finish);
+        int result = Counter.sumByEven5(start, finish);
         int expected = 110;
         assertThat(result).isEqualTo(expected);
     }
@@ -63,7 +63,7 @@ class CounterTest {
     void whenSumEvenNumbersFromNegativeTenToTenThenZero() {
         int start = -10;
         int finish = 10;
-        int result = Counter.sumByEven(start, finish);
+        int result = Counter.sumByEven5(start, finish);
         int expected = 0;
         assertThat(result).isEqualTo(expected);
     }
@@ -72,7 +72,7 @@ class CounterTest {
     void whenSumEvenNumbersFromNegativeTenToNegativeTwoThenMinusThirty() {
         int start = -10;
         int finish = -2;
-        int result = Counter.sumByEven(start, finish);
+        int result = Counter.sumByEven5(start, finish);
         int expected = -30;
         assertThat(result).isEqualTo(expected);
     }
@@ -81,7 +81,7 @@ class CounterTest {
     void whenSumEvenNumbersFrom3To8Then18() {
         int start = 3;
         int finish = 8;
-        int result = Counter.sumByEven(start, finish);
+        int result = Counter.sumByEven5(start, finish);
         int expected = 18;
         assertThat(result).isEqualTo(expected);
     }
