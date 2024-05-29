@@ -9,7 +9,7 @@ public class Counter {
         return sum;
     }
 
-    public static int sumByEven5(int start, int finish) {
+    public static int sumByEven(int start, int finish) {
         int sum = 0;
         for (int i = start; i <= finish; i++) {
             if (i % 2 == 0) {
@@ -26,8 +26,8 @@ public class Counter {
         System.out.println(sum(0, 5));
         System.out.println(sum(5, 10));
 
-        System.out.println(sumByEven5(5, 15));
-        System.out.println(sumByEven5(8, 13));
-        System.out.println(sumByEven5(6, 6));
+        System.out.println(sumByEven(1, 10));
+        System.out.println(sumByEven(3, 8));
+        System.out.println(sumByEven(1, 1));
     }
 }
